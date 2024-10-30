@@ -1,10 +1,12 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow
+from UI_py.ExcelClassifier import Ui_MainWindow
 
 
-class ExcelClassifier(QMainWindow):
+class ExcelClassifier(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
+        self.setupUi(self)
 
 
 if __name__ == "__main__":

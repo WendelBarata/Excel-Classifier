@@ -1,5 +1,6 @@
 # Files I don't want to be tracked by git
 usefull/UsefullCode.txt
+Test/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
