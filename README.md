@@ -51,5 +51,20 @@ To use Excel Classifier effectively, follow these guidelines:
    - Define the column name you want to use to separate data.
    - Each unique value in this column will generate a new file.
 
-## Requirements
-- Just install the application.
+## Requirements (to modify the code)
+- **Python** (version 3.7 or higher)
+- **PySide6** (pip install PySide6)
+- **Pandas** (pip install Pandas)
+- **Openpyxl** (pip install openpyxl)
+- **Pyinstaller** (pip install pyinstaller)
+- **Pillow** (pip install pillow)
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Requirements to use the application
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/Excel-Classifier.git .
+   ```
+2. Install the application from App folder.
