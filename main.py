@@ -61,17 +61,18 @@ class ExcelClassifier(QMainWindow, Ui_MainWindow):
         Method for splitting the excel file by column
         """
         # Get the folder paths
-        inputFolder = Path(self.leExcelInputFolder.text())
-        outputFolder = Path(self.leExcelFolderDest.text())
+        inputFolder = self.leExcelInputFolder.text()
+        outputFolder = self.leExcelFolderDest.text()
         column = self.leColumnTitle.text()
 
         # Check if the folder paths are empty
-        if inputFolder.exists() or outputFolder.exists() or column == "":
+        if inputFolder == "" or outputFolder == "" or column == "":
             self.leStatusBar.setText("Please fill in all the fields")
             return
 
         # Split the excel files
-        success = split_excel_by_column(inputFolder, outputFolder, column,
+        success = split_excel_by_column(Path(inputFolder),
+                                        Path(outputFolder), column,
                                         self.statusMessage)
 
         # Clear the fields

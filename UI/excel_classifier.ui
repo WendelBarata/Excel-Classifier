@@ -70,7 +70,7 @@
 	font-size: 15px;</string>
          </property>
          <property name="placeholderText">
-          <string>Folder with the excel files to be split</string>
+          <string>Folder with the Excel files to be split.</string>
          </property>
         </widget>
        </item>
@@ -115,7 +115,7 @@ QPushButton#btnExcelInputFolder:pressed {
         <widget class="QLabel" name="label">
          <property name="minimumSize">
           <size>
-           <width>110</width>
+           <width>145</width>
            <height>0</height>
           </size>
          </property>
@@ -133,7 +133,7 @@ QPushButton#btnExcelInputFolder:pressed {
 	font-size: 15px;</string>
          </property>
          <property name="text">
-          <string>Excel Folder</string>
+          <string>Source Folder</string>
          </property>
         </widget>
        </item>
@@ -196,7 +196,7 @@ QPushButton#btnExcelInputFolder:pressed {
         <widget class="QLabel" name="label_4">
          <property name="minimumSize">
           <size>
-           <width>110</width>
+           <width>145</width>
            <height>0</height>
           </size>
          </property>
@@ -302,7 +302,7 @@ QPushButton#btnSplitExcel:pressed {
         <widget class="QLabel" name="label_2">
          <property name="minimumSize">
           <size>
-           <width>110</width>
+           <width>145</width>
            <height>0</height>
           </size>
          </property>
@@ -320,7 +320,7 @@ QPushButton#btnSplitExcel:pressed {
 	font-size: 15px;</string>
          </property>
          <property name="text">
-          <string>Excel Folder</string>
+          <string>Destination Folder</string>
          </property>
         </widget>
        </item>
@@ -334,7 +334,7 @@ QPushButton#btnSplitExcel:pressed {
 	font-size: 15px;</string>
          </property>
          <property name="placeholderText">
-          <string>Destination folder for the split files.</string>
+          <string>Destination folder for the separated files.</string>
          </property>
         </widget>
        </item>
@@ -424,7 +424,7 @@ QPushButton#btnExcelFolderDest:pressed {
 	font-size: 10px;</string>
       </property>
       <property name="text">
-       <string>Version 1.0.0 by Wendel Barata</string>
+       <string>Version 1.0.0 by Wendel Isaias Barata</string>
       </property>
      </widget>
     </item>

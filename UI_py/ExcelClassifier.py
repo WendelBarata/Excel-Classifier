@@ -81,7 +81,7 @@ class Ui_MainWindow(object):
 
         self.label = QLabel(self.fExcelInputFolder)
         self.label.setObjectName(u"label")
-        self.label.setMinimumSize(QSize(110, 0))
+        self.label.setMinimumSize(QSize(145, 0))
         self.label.setMaximumSize(QSize(165, 16777215))
         self.label.setStyleSheet(u"	padding: 4px 8px;\n"
 "	background: transparent;\n"
@@ -128,7 +128,7 @@ class Ui_MainWindow(object):
 
         self.label_4 = QLabel(self.fColumnTitle)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setMinimumSize(QSize(110, 0))
+        self.label_4.setMinimumSize(QSize(145, 0))
         self.label_4.setMaximumSize(QSize(165, 16777215))
         self.label_4.setStyleSheet(u"	padding: 4px 8px;\n"
 "	background: transparent;\n"
@@ -190,7 +190,7 @@ class Ui_MainWindow(object):
         self.gridLayout_8.setObjectName(u"gridLayout_8")
         self.label_2 = QLabel(self.fExcelFolderDest)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setMinimumSize(QSize(110, 0))
+        self.label_2.setMinimumSize(QSize(145, 0))
         self.label_2.setMaximumSize(QSize(165, 16777215))
         self.label_2.setStyleSheet(u"	padding: 4px 8px;\n"
 "	background: transparent;\n"
@@ -283,16 +283,16 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.leExcelInputFolder.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Folder with the excel files to be split", None))
+        self.leExcelInputFolder.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Folder with the Excel files to be split.", None))
         self.btnExcelInputFolder.setText(QCoreApplication.translate("MainWindow", u"Search", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"Excel Folder", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Source Folder", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Type the title of the column into which the files should be divided.", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Column Title", None))
         self.btnSplitExcel.setText(QCoreApplication.translate("MainWindow", u"Execute", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Excel Folder", None))
-        self.leExcelFolderDest.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Destination folder for the split files.", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Destination Folder", None))
+        self.leExcelFolderDest.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Destination folder for the separated files.", None))
         self.btnExcelFolderDest.setText(QCoreApplication.translate("MainWindow", u"Search", None))
         self.lbTitle.setText(QCoreApplication.translate("MainWindow", u"Excel Classifier", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Version 1.0.0 by Wendel Barata", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Version 1.0.0 by Wendel Isaias Barata", None))
     # retranslateUi
 
