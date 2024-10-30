@@ -25,6 +25,10 @@ class ExcelClassifier(QMainWindow, Ui_MainWindow):
             lambda: self.getExcelFolder(self.leExcelFolderDest))
         self.btnSplitExcel.clicked.connect(self.splitExcel)
 
+        # Change value in Line edit based on the selected item in the combobox
+        self.cbColumnTitle.currentTextChanged.connect(
+            self.leColumnTitle.setText)
+
         # Connect the status message
         self.statusMessage.connect(self.setStatusMessage)
 
@@ -49,6 +53,7 @@ class ExcelClassifier(QMainWindow, Ui_MainWindow):
         if widget == self.leExcelInputFolder:
             # Set the columns as a values to cbColumnTitle
             columns = common_columns(Path(folder), self.statusMessage)
+            self.cbColumnTitle.clear()
             self.cbColumnTitle.addItems(columns)
 
     def splitExcel(self):
@@ -61,7 +66,7 @@ class ExcelClassifier(QMainWindow, Ui_MainWindow):
         column = self.leColumnTitle.text()
 
         # Check if the folder paths are empty
-        if inputFolder == "" or outputFolder == "" or column == "":
+        if inputFolder.exists() or outputFolder.exists() or column == "":
             self.leStatusBar.setText("Please fill in all the fields")
             return
 

@@ -3,7 +3,7 @@ from PySide6.QtCore import Signal
 import pandas as pd
 
 
-def split_excel_by_column(input_folder: Path, output_folder,
+def split_excel_by_column(input_folder: Path, output_folder: Path,
                           column: str,
                           sender: Signal = None):
     '''
