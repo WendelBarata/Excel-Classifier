@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>550</width>
-    <height>285</height>
+    <height>304</height>
    </rect>
   </property>
   <property name="maximumSize">
    <size>
     <width>16777215</width>
-    <height>285</height>
+    <height>304</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -26,294 +26,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_7">
-    <item row="4" column="0">
-     <widget class="QLabel" name="lbStatusBar">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>33</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>33</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">	padding: 4px 8px;
-	background: transparent;
-	border: None;
-	color: rgb(46, 178, 178);
-	font-size: 17px;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QPushButton" name="btnSplitExcel">
-      <property name="maximumSize">
-       <size>
-        <width>164</width>
-        <height>27</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton#btnSplitExcel {
-  background: rgb(197, 254, 254);;
-  border-radius: 2px;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  color: rgb(23, 83, 104);
-}
-
-QPushButton#btnSplitExcel:pressed {
-  background: transparent;
-  border: 1px solid rgb(23, 83, 104);
-  border-radius: 4px;
-  color: rgb(177, 235, 255);
-}</string>
-      </property>
-      <property name="text">
-       <string>Execute</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0" colspan="2">
-     <widget class="QLabel" name="lbTitle">
-      <property name="styleSheet">
-       <string notr="true">QLabel#lbTitle {
-	padding: 4px 8px;
-	background: transparent;
-	border: None;
-	color: rgb(197, 254, 254);;
-	font-size: 24px;
-	font-weight: 700
-}</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Plain</enum>
-      </property>
-      <property name="text">
-       <string>Excel Classifier</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0" colspan="2">
-     <widget class="QFrame" name="fExcelFolderDest">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QFrame#fExcelFolderDest {
-	background: transparent;
-	border: 1px solid rgba(23, 83, 104, 0.3);
-	border-radius: 4px
-}</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_8">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="minimumSize">
-          <size>
-           <width>110</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>165</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">	padding: 4px 8px;
-	background: transparent;
-	border: None;
-	color: rgb(46, 178, 178);
-	font-size: 15px;</string>
-         </property>
-         <property name="text">
-          <string>Excel File</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="leExcelFolderDest">
-         <property name="styleSheet">
-          <string notr="true">	padding: 4px 8px;
-	background: transparent;
-	border: None;
-	color: rgb(197, 254, 254);;
-	font-size: 15px;</string>
-         </property>
-         <property name="placeholderText">
-          <string>Destination folder for the split files.</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QPushButton" name="btnExcelFolderDest">
-         <property name="minimumSize">
-          <size>
-           <width>80</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton#btnExcelFolderDest {
-  background: rgb(197, 254, 254);;
-  border-radius: 2px;
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  color: rgb(23, 83, 104);
-}
-
-QPushButton#btnExcelFolderDest:pressed {
-  background: transparent;
-  border: 1px solid rgb(23, 83, 104);
-  border-radius: 4px;
-  color: rgb(177, 235, 255);
-}</string>
-         </property>
-         <property name="text">
-          <string>Search</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="3" column="0" colspan="2">
-     <widget class="QFrame" name="fColumnTitle">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>70</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>70</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QFrame#fColumnTitle {
-	background: transparent;
-	border: 1px solid rgba(23, 83, 104, 0.3);
-	border-radius: 4px
-}</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="leColumnTitle">
-         <property name="styleSheet">
-          <string notr="true">	padding: 4px 8px;
-	background: transparent;
-	border: None;
-	color: rgb(197, 254, 254);
-	font-size: 15px;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLabel" name="label_11">
-         <property name="styleSheet">
-          <string notr="true">	background: transparent;
-	border: None;
-	color: rgba(46, 178, 178, 0.5);
-	font-size: 10px;</string>
-         </property>
-         <property name="text">
-          <string>Type the title of the column into which the files should be divided.</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_4">
-         <property name="minimumSize">
-          <size>
-           <width>110</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>165</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">	padding: 4px 8px;
-	background: transparent;
-	border: None;
-	color: rgb(46, 178, 178);
-	font-size: 15px;</string>
-         </property>
-         <property name="text">
-          <string>Column Title</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QComboBox" name="cbColumnTitle">
-         <property name="minimumSize">
-          <size>
-           <width>100</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QComboBox#cbColumnTitle {
-	background: transparent;
- 	font-size: 18px;
-	color: rgb(197, 254, 254);
-	border: None;
-}</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="1" column="0" colspan="2">
+    <item row="1" column="0" colspan="3">
      <widget class="QFrame" name="fExcelInputFolder">
       <property name="maximumSize">
        <size>
@@ -425,6 +138,294 @@ QPushButton#btnExcelInputFolder:pressed {
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="3">
+     <widget class="QFrame" name="fColumnTitle">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#fColumnTitle {
+	background: transparent;
+	border: 1px solid rgba(23, 83, 104, 0.3);
+	border-radius: 4px
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="leColumnTitle">
+         <property name="styleSheet">
+          <string notr="true">	padding: 4px 8px;
+	background: transparent;
+	border: None;
+	color: rgb(197, 254, 254);
+	font-size: 15px;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="label_11">
+         <property name="styleSheet">
+          <string notr="true">	background: transparent;
+	border: None;
+	color: rgba(46, 178, 178, 0.5);
+	font-size: 10px;</string>
+         </property>
+         <property name="text">
+          <string>Type the title of the column into which the files should be divided.</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="minimumSize">
+          <size>
+           <width>110</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>165</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">	padding: 4px 8px;
+	background: transparent;
+	border: None;
+	color: rgb(46, 178, 178);
+	font-size: 15px;</string>
+         </property>
+         <property name="text">
+          <string>Column Title</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QComboBox" name="cbColumnTitle">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox#cbColumnTitle {
+	background: transparent;
+ 	font-size: 18px;
+	color: rgb(197, 254, 254);
+	border: None;
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="btnSplitExcel">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>164</width>
+        <height>27</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#btnSplitExcel {
+  background: rgb(197, 254, 254);;
+  border-radius: 2px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: rgb(23, 83, 104);
+}
+
+QPushButton#btnSplitExcel:pressed {
+  background: transparent;
+  border: 1px solid rgb(23, 83, 104);
+  border-radius: 4px;
+  color: rgb(177, 235, 255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Execute</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="3">
+     <widget class="QFrame" name="fExcelFolderDest">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#fExcelFolderDest {
+	background: transparent;
+	border: 1px solid rgba(23, 83, 104, 0.3);
+	border-radius: 4px
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="minimumSize">
+          <size>
+           <width>110</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>165</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">	padding: 4px 8px;
+	background: transparent;
+	border: None;
+	color: rgb(46, 178, 178);
+	font-size: 15px;</string>
+         </property>
+         <property name="text">
+          <string>Excel File</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="leExcelFolderDest">
+         <property name="styleSheet">
+          <string notr="true">	padding: 4px 8px;
+	background: transparent;
+	border: None;
+	color: rgb(197, 254, 254);;
+	font-size: 15px;</string>
+         </property>
+         <property name="placeholderText">
+          <string>Destination folder for the split files.</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="btnExcelFolderDest">
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>100</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton#btnExcelFolderDest {
+  background: rgb(197, 254, 254);;
+  border-radius: 2px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(23, 83, 104);
+}
+
+QPushButton#btnExcelFolderDest:pressed {
+  background: transparent;
+  border: 1px solid rgb(23, 83, 104);
+  border-radius: 4px;
+  color: rgb(177, 235, 255);
+}</string>
+         </property>
+         <property name="text">
+          <string>Search</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="leStatusBar">
+      <property name="styleSheet">
+       <string notr="true">	padding: 4px 8px;
+	background: transparent;
+	border: None;
+	color: rgb(46, 178, 178);
+	font-size: 17px;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="3">
+     <widget class="QLabel" name="lbTitle">
+      <property name="styleSheet">
+       <string notr="true">QLabel#lbTitle {
+	padding: 4px 8px;
+	background: transparent;
+	border: None;
+	color: rgb(197, 254, 254);;
+	font-size: 24px;
+	font-weight: 700
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="text">
+       <string>Excel Classifier</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true">	background: transparent;
+	border: None;
+	color: rgba(46, 178, 178, 0.5);
+	font-size: 10px;</string>
+      </property>
+      <property name="text">
+       <string>Version 1.0.0 by Wendel Barata</string>
+      </property>
      </widget>
     </item>
    </layout>
