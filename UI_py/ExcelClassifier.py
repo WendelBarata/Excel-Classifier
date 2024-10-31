@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(550, 304)
+        MainWindow.resize(625, 304)
         MainWindow.setMaximumSize(QSize(16777215, 304))
         MainWindow.setStyleSheet(u"QMainWindow#MainWindow {\n"
 "	background: rgba(0, 62, 74, 0.2);\n"
@@ -140,7 +140,7 @@ class Ui_MainWindow(object):
 
         self.cbColumnTitle = QComboBox(self.fColumnTitle)
         self.cbColumnTitle.setObjectName(u"cbColumnTitle")
-        self.cbColumnTitle.setMinimumSize(QSize(100, 30))
+        self.cbColumnTitle.setMinimumSize(QSize(140, 30))
         self.cbColumnTitle.setStyleSheet(u"QComboBox#cbColumnTitle {\n"
 "	background: transparent;\n"
 " 	font-size: 18px;\n"
@@ -262,14 +262,14 @@ class Ui_MainWindow(object):
 
         self.gridLayout_7.addWidget(self.lbTitle, 0, 0, 1, 3)
 
-        self.label_3 = QLabel(self.centralwidget)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setStyleSheet(u"	background: transparent;\n"
+        self.lbVersion = QLabel(self.centralwidget)
+        self.lbVersion.setObjectName(u"lbVersion")
+        self.lbVersion.setStyleSheet(u"	background: transparent;\n"
 "	border: None;\n"
 "	color: rgba(46, 178, 178, 0.5);\n"
 "	font-size: 10px;")
 
-        self.gridLayout_7.addWidget(self.label_3, 5, 1, 1, 1)
+        self.gridLayout_7.addWidget(self.lbVersion, 5, 1, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
         QWidget.setTabOrder(self.leExcelInputFolder, self.leColumnTitle)
@@ -293,6 +293,6 @@ class Ui_MainWindow(object):
         self.leExcelFolderDest.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Destination folder for the separated files.", None))
         self.btnExcelFolderDest.setText(QCoreApplication.translate("MainWindow", u"Search", None))
         self.lbTitle.setText(QCoreApplication.translate("MainWindow", u"Excel Classifier", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Version 1.0.0 by Wendel Isaias Barata", None))
+        self.lbVersion.setText(QCoreApplication.translate("MainWindow", u"Version 1.0.0 by Wendel Isaias Barata", None))
     # retranslateUi
 

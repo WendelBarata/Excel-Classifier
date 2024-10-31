@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>550</width>
+    <width>625</width>
     <height>304</height>
    </rect>
   </property>
@@ -222,7 +222,7 @@ QPushButton#btnExcelInputFolder:pressed {
         <widget class="QComboBox" name="cbColumnTitle">
          <property name="minimumSize">
           <size>
-           <width>100</width>
+           <width>140</width>
            <height>30</height>
           </size>
          </property>
@@ -416,7 +416,7 @@ QPushButton#btnExcelFolderDest:pressed {
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="lbVersion">
       <property name="styleSheet">
        <string notr="true">	background: transparent;
 	border: None;

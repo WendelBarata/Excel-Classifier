@@ -30,16 +30,24 @@ def split_excel_by_column(input_folder: Path, output_folder: Path,
             # Create the folder if it does not exist
             folder_each_excel.mkdir(exist_ok=True)
 
-            # Read the excel file
-            df = pd.read_excel(file)
+            # Read all sheets in the Excel file
+            sheets = pd.read_excel(file, sheet_name=None)
 
-            # Split the excel file by the column
-            for name, group in df.groupby(column):
-                # Create a new excel file
-                new_file = folder_each_excel / f'{file.stem}_{name}.xlsx'
-                # Create the excel file
+            # Get unique values for the specified column across all sheets
+            unique_values = set()
+            for df in sheets.values():
+                unique_values.update(df[column].unique())
+
+            # Create a new Excel file for each unique value
+            for value in unique_values:
+                new_file = folder_each_excel / f'{file.stem}_{value}.xlsx'
                 with pd.ExcelWriter(new_file, engine='openpyxl') as writer:
-                    group.to_excel(writer, index=False)
+                    for sheet_name, df in sheets.items():
+                        # Filter the DataFrame by the current unique value
+                        group = df[df[column] == value]
+                        # Write the filtered DataFrame to the new Excel file
+                        group.to_excel(writer, index=False,
+                                       sheet_name=sheet_name)
 
         # Emit a signal informing the user that the excel files have been split
         if sender is not None:
@@ -82,7 +90,7 @@ def split_excel_by_column(input_folder: Path, output_folder: Path,
         return False
 
 
-def common_columns(input_folder: Path, sender: Signal) -> list:
+def common_columns(input_folder: Path, sender: Signal = None) -> list:
     '''
     Method that retrieves all the titles in the column and returns a list of
     only the titles present in all the files.
@@ -97,27 +105,29 @@ def common_columns(input_folder: Path, sender: Signal) -> list:
         # Get the excel files
         excel_files = list(input_folder.glob('*.xlsx'))
 
-        # Get the common columns
-        common_columns = []
+        # Initialize common_columns as None
+        common_columns = None
+
         for file in excel_files:
-            # Read the excel file
-            df = pd.read_excel(file)
+            # Read all sheets in the Excel file
+            sheets = pd.read_excel(file, sheet_name=None)
 
-            # Get the column titles
-            columns = df.columns
+            # Collect columns from all sheets
+            file_columns = set()
+            for df in sheets.values():
+                file_columns.update(df.columns)
 
-            # Get the common column titles
-            if not common_columns:
-                common_columns = set(columns)
+            # Determine the common columns
+            if common_columns is None:
+                common_columns = file_columns
             else:
-                # Remove the columns that are not common
-                for column in common_columns.copy():
-                    if column not in columns:
-                        common_columns.remove(column)
-                    if not common_columns:
-                        return []
+                common_columns.intersection_update(file_columns)
 
-        return list(common_columns)
+            # If no common columns are found, return an empty list
+            if not common_columns:
+                return []
+
+        return list(common_columns) if common_columns else []
 
     except FileNotFoundError:
         if sender is not None:
@@ -156,9 +166,9 @@ def common_columns(input_folder: Path, sender: Signal) -> list:
 
 
 if __name__ == '__main__':
-    # input_folder = Path('Test/Excel_input')
-    # output_folder = Path('Test/Excel_output')
-    # column = 'Usuario'
-    # split_excel_by_column(input_folder, output_folder, column)
+    input_folder = Path('Test/Excel_input')
+    output_folder = Path('Test/Excel_output')
+    column = 'Coluna1'
+    split_excel_by_column(input_folder, output_folder, column)
 
-    print(common_columns(Path('Test/Excel_input')))
+    # print(common_columns(Path('Test/Excel_input')))

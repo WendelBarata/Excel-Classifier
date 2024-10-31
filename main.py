@@ -13,6 +13,9 @@ class ExcelClassifier(QMainWindow, Ui_MainWindow):
         super().__init__(parent)
         self.setupUi(self)
 
+        # Set Version
+        self.lbVersion.setText("Version 1.1.0 by Wendel Isaias Barata")
+
         # Set initial values
         self.leExcelInputFolder.setReadOnly(True)
         self.leExcelFolderDest.setReadOnly(True)
@@ -95,6 +98,7 @@ class ExcelClassifier(QMainWindow, Ui_MainWindow):
         self.leExcelInputFolder.clear()
         self.leExcelFolderDest.clear()
         self.leColumnTitle.clear()
+        self.cbColumnTitle.clear()
 
     def eventFilter(self, obj: QObject, event: QEvent) -> bool:
         '''
